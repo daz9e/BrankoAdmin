@@ -41,4 +41,4 @@ Route::get('/photos/create', [PhotoController::class, 'create'])->name('photos.c
 
 Route::post('/photoss', [App\Http\Controllers\PhotoController::class, 'store'])->name('photos.store');
 
-Route::get('/categorieslist', [App\Http\Controllers\CategoryController::class, 'indexWithPhotos'])->name('categories.indexWithPhotos');
+Route::get('/categorieslist', [App\Http\Controllers\CategoryController::class, 'indexWithPhotos'])->name('categories.indexWithPhotos')->middleware(\App\Http\Middleware\prikol::class);;
